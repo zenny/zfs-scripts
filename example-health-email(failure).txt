@@ -1,0 +1,70 @@
+ZFS Critical: Server Status Report
+
+System Status Report
+
+Up Time:
+10:00AM up 16:24, 1 user, load averages: 0.00, 0.00, 0.00
+
+ZPool Status:
+ZPool Issue Detected!
+  pool: tank
+ state: DEGRADED
+status: One or more devices has been removed by the administrator.
+        Sufficient replicas exist for the pool to continue functioning in a
+        degraded state.
+action: Online the device using 'zpool online' or replace the device with
+        'zpool replace'.
+ scan: resilvered 91K in 0h0m with 0 errors on Mon Nov  5 11:38:39 2012
+config:
+
+        NAME                      STATE     READ WRITE CKSUM
+        tank                      DEGRADED     0     0     0
+          mirror-0                DEGRADED     0     0     0
+            ada1                  ONLINE       0     0     0
+            15356218612390375837  REMOVED      0     0     0  was /dev/ada2
+          mirror-1                ONLINE       0     0     0
+            ada2                  ONLINE       0     0     0
+            ada5                 ONLINE       0     0     0
+          mirror-2                ONLINE       0     0     0
+            ada4                  ONLINE       0     0     0
+            ada6                 ONLINE       0     0     0
+          mirror-3                DEGRADED     0     0     0
+            3252605489510437052   REMOVED      0     0     0  was /dev/ada0
+            ada7                 ONLINE       0     0     0
+          mirror-4                ONLINE       0     0     0
+            ada8                 ONLINE       0     0     0
+            ada10                ONLINE       0     0     0
+        cache
+          ada9                   ONLINE       0     0     0
+        spares
+          ada11                   AVAIL
+
+errors: No known data errors
+
+CPU Temp: 28.5 C
+
+Min HDD Temp: 23 C (ada8)
+Max HDD Temp: 37 C (ada10)
+Avg HDD Temp: 30 C
+
+Last 20 Lines of dmesg
+Nov  6 09:01:05 hostNameHere kernel: (ada2:siisch0:0:2:0): lost device
+Nov  6 09:01:05 hostNameHere kernel: (ada3:siisch0:0:3:0): lost device
+Nov  6 09:01:05 hostNameHere kernel: (pmp0:siisch0:0:15:0): lost device
+Nov  6 09:01:35 hostNameHere kernel: siisch0: Timeout on slot 30
+Nov  6 09:01:35 hostNameHere kernel: siisch0: siis_timeout is 01000000 ss 60000000 rs 60000000 es 00000000 sts 801f2000 serr 00080000
+Nov  6 09:01:35 hostNameHere kernel: siisch0:  ... waiting for slots 20000000
+Nov  6 09:01:35 hostNameHere kernel: siisch0: Timeout on slot 29
+Nov  6 09:01:35 hostNameHere kernel: siisch0: siis_timeout is 01000000 ss 60000000 rs 60000000 es 00000000 sts 801f2000 serr 00080000
+Nov  6 09:01:54 hostNameHere kernel: siisch0: port is not ready (timeout 1000ms) status = 001f2000
+Nov  6 09:01:54 hostNameHere kernel: siisch0: port ready timeout
+Nov  6 09:01:54 hostNameHere kernel: siisch0: trying full port reset ...
+Nov  6 09:02:10 hostNameHere kernel: (ada3:siisch0:0:3:0): removing device entry
+Nov  6 09:02:11 hostNameHere kernel: (ada2:siisch0:0:2:0): removing device entry
+Nov  6 09:02:28 hostNameHere kernel: (ada1:siisch0:0:1:0): removing device entry
+Nov  6 09:02:28 hostNameHere kernel: (ada0:siisch0:0:0:0): removing device entry
+Nov  6 09:02:49 hostNameHere kernel: siisch0: Timeout on slot 30
+Nov  6 09:02:49 hostNameHere kernel: siisch0: siis_timeout is 01040000 ss 40000000 rs 40000000 es 00000000 sts 801f2000 serr 00080000
+Nov  6 09:03:19 hostNameHere kernel: siisch0: Timeout on slot 30
+Nov  6 09:03:19 hostNameHere kernel: siisch0: siis_timeout is 07000000 ss 40000000 rs 40000000 es 00000000 sts 801f2000 serr 00680000
+Nov  6 09:03:19 hostNameHere kernel: (pmp0:siisch0:0:15:0): removing device entry
