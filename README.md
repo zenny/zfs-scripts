@@ -48,3 +48,11 @@ You can set it up to run on a cron job using:
 
 
 
+##ZPool balancer
+
+3rd script is to attempt to balance your data across all the drives in your pool. If you progressively add drives to a pool, the data that is already written is "stuck" on the original drives. If these drives were "full", it will limit which drives ZFS can read/write to, and lower your potential throughput. This script is by no means perfect.
+
+This script requires two things:
+- A redundant location that the data can be copied to with sufficent space
+
+
