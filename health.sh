@@ -1,5 +1,9 @@
 #!/usr/local/bin/bash
 
+# written by Alex Stundzia
+# alex@stundzia.com, twitter: @stundzia
+
+
 # define your email address:
 MAIL_TO='your@email.com'
 
