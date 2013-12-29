@@ -1,0 +1,17 @@
+System Status Report
+
+Up Time:
+12:00AM up 41 days, 8:22, 1 user, load averages: 0.03, 0.01, 0.00
+
+ZPool Status:
+All Pools are healthy.
+
+CPU Temp: 23.2 C
+
+Min HDD Temp: 17 C (ada8)
+Max HDD Temp: 31 C (ada2)
+Avg HDD Temp: 23 C
+
+Last 20 Lines of dmesg
+Jan  1 00:00:05 newData kernel: GEOM: ada27: the primary GPT table is corrupt or invalid.
+Jan  1 00:00:05 newData kernel: GEOM: ada27: using the secondary instead -- recovery strongly advised.
