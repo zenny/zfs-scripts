@@ -1,4 +1,8 @@
-# This is for an example. Consider the directory "/tank/pictures"
+#!/usr/local/bin/bash
+# written by Alex Stundzia
+# alex@stundzia.com, twitter: @stundzia
+
+# This is currently configured as an example. Consider the directory "/tank/pictures"
 # is filled with photos that mostly reside on drives that are "old" in the pool.
 # You just added a new redundant set of disks, and wish to "balance" this data across
 # all disks in the pool. The temporary directory must be a directory that resides on a
