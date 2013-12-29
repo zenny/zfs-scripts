@@ -9,6 +9,11 @@ Some common scripts I use for ZFS (based on FreeBSD)
 
 > health.sh
 
+It assumes your drives have the prefix "ada". If your drives are "ad", you might need to change 1 sed command...
+
+It also assumes you have smartctl loaded, and a way to read your CPU temp (amdtemp_load="YES").
+
+
 You can set it up to run on a cron job using:
 
 > su
