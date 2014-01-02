@@ -50,9 +50,12 @@ You can set it up to run on a cron job using:
 
 ##ZPool balancer
 
-3rd script is to attempt to balance your data across all the drives in your pool. If you progressively add drives to a pool, the data that is already written is "stuck" on the original drives. If these drives were "full", it will limit which drives ZFS can read/write to, and lower your potential throughput. This script is by no means perfect.
+The 3rd script is to attempt to balance your data across all the drives in your pool. If you progressively add drives to a pool, the data that is already written is "stuck" on the original drives. If these drives were "full", it will limit which drives ZFS can read/write to, and lower your potential throughput. This script is by no means perfect.
 
-This script requires two things:
-- A redundant location that the data can be copied to with sufficent space
+###Example:
+
+zpool tank has: mirror-1 (100% full), mirror-2 (100% full). You add mirror-3 (0% full). Run the script and it will make it: mirror-1 (33% full), mirror-2 (33% full), mirror-3 (33% full). New writes will then be sent to the three vdevs, instead of the 1.
+
+This script requires a (redundant) location that the data can be copied to with sufficent space for any one folder (aka a seperate pool).
 
 
